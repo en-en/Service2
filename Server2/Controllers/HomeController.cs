@@ -15,6 +15,11 @@ namespace Server2.Controllers
             return View();
         }
 
+        public IActionResult Hello()
+        {
+            return Json("我是server2");
+        }
+
         public IActionResult Privacy()
         {
             return View();
