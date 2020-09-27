@@ -14,12 +14,27 @@ namespace Server2.Controllers
         {
             return View();
         }
+        public IActionResult Health()
+        {
+            return Json(true);
+        }
+
 
         public IActionResult Hello()
         {
             return Json("我是server2");
         }
 
+        [HttpGet]
+        public IActionResult GetCurHostIp()
+        {
+            return Json(HttpContext.Connection.LocalIpAddress.MapToIPv4()?.ToString());
+        }
+
+        public IActionResult Test()
+        {
+            return Json(HttpContext.Connection.LocalIpAddress.MapToIPv4()?.ToString());
+        }
         public IActionResult Privacy()
         {
             return View();
