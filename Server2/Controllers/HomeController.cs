@@ -28,14 +28,14 @@ namespace Server2.Controllers
         [HttpGet]
         public IActionResult GetCurHostIp()
         {
-            // return Json(HttpContext.Connection.LocalIpAddress.MapToIPv4()?.ToString());
-            return Json("我是server2");
+             return Json(HttpContext.Connection.LocalIpAddress.MapToIPv4()?.ToString());
+            //return Json("我是server2");
         }
 
         public IActionResult Test()
         {
-            return Json("我是server2");
-           // return Json(HttpContext.Connection.LocalIpAddress.MapToIPv4()?.ToString());
+            //return Json("我是server2");
+            return Json(HttpContext.Connection.LocalIpAddress.MapToIPv4()?.ToString());
         }
         public IActionResult Privacy()
         {
