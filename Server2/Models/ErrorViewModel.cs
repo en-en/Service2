@@ -6,6 +6,7 @@ namespace Server2.Models
     {
         public string RequestId { get; set; }
 
+
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
 }
